@@ -21,7 +21,7 @@ pascals_triangle <- function(n) {
   
   for (i in 0:(n)) {
     row <- numeric(i + 1)
-    row[1] <- 1
+    row[0] <- 1
     row[i + 1] <- 1
     if (i > 1) {
       for (j in 2:i) {
