@@ -18,9 +18,10 @@
 #' @export
 pascals_triangle <- function(n) {
   triangle <- list()
+  
   for (i in 0:(n - 1)) {
     row <- numeric(i + 1)
-    row[1] <- 1
+    row[0] <- 1
     row[i + 1] <- 1
     if (i > 1) {
       for (j in 2:i) {
@@ -29,5 +30,6 @@ pascals_triangle <- function(n) {
     }
     triangle[[i + 1]] <- row
   }
+  
   return(triangle)
 }
